@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod3
+  labels:
+    app: vivekservice
+spec:
+  containers:
+  - name: k8sservice
+    image: arjunachari12/k8s-demo:2
+    ports:
+    - name: nodejsport
+      containerPort: 3000
+    
