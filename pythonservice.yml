@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vivekflask
+  labels:
+    app: vivekflask
+spec:
+  containers:
+  - name: vivekflask
+    image: viveksofty/python-docker
+    ports:
+    - name: nodejsport
+      containerPort: 5000
+    

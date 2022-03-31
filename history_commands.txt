@@ -1,0 +1,241 @@
+    1  ls
+    2  clear
+    3  pwd
+    4  ls
+    5  sudo apt-get update
+    6  sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+    7  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    8  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    9  sudo apt-get update
+   10  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   11  sudo docker run hello-world
+   12  sudo usermod -a -G docker ubuntu
+   13  docker ps
+   14  docker ps
+   15  sudo usermod -a -G docker ubuntu
+   16  docker ps
+   17  docker imges
+   18  docker images
+   19  clear
+   20  sudo apt-get update &&   sudo apt-get install -y apt-transport-https &&   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &&   sudo touch /etc/apt/sources.list.d/kubernetes.list &&   echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list &&   sudo apt-get update &&   sudo apt-get install -y kubectl
+   21  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64   && chmod +x minikube &&   sudo cp minikube /usr/local/bin && rm minikube
+   22  kubectl get pods
+   23  sudo reboot
+   24  ls
+   25  exit
+   26  docker run hello-world
+   27  dsds
+   28  ls
+   29  clear
+   30  pwd
+   31  ls
+   32  tmux
+   33  tmux -h
+   34  tmux -s vivek
+   35  tmux -n ivke
+   36  tmux -c vivek
+   37  tmux -c ls
+   38  tmux -c pwd
+   39  ls
+   40  docker pull ubuntu
+   41  docker container run ubuntu
+   42  docker ps
+   43  docker ps -a
+   44  docker search ngnix
+   45  docker container run -d ngnix
+   46  docker container run -d --name vivekngnix -p 8080:80 nginx
+   47  docke rps
+   48  docker ps
+   49  minikube start
+   50  kubectl get pods
+   51  ls
+   52  ls
+   53  clear
+   54  minikube start
+   55  ls
+   56  cd k8s/.git/
+   57  cd ..
+   58  ls
+   59  DOCKER_BUILDKIT=1 docker build .
+   60  cd
+   61  vi /etc/docker/daemon.json
+   62  sudo vi /etc/docker/daemon.json
+   63  sudo systemctl daemon-reload 
+   64  sudo systemctl restart docker
+   65  cd k8s/
+   66  mkdir pythonapp
+   67  cd pythonapp/
+   68  ls
+   69  vi requirements.txt
+   70  vi app.py
+   71  ls
+   72  clear
+   73  pwd
+   74  ls
+   75  vi Dockerfile
+   76  ls -l
+   77  docker build --tag python-docker .
+   78  docker images
+   79  docker tag python-docker:latest viveksofty/python-docker:latest 
+   80  ls
+   81  docker login -u vivek
+   82  docker login -u viveksofty
+   83  docker push viveksofty/python-docker
+   84  ls
+   85  vi Dockerfile 
+   86  cd ..
+   87  l
+   88  vi pod3Service.yml 
+   89  vi podservice.yml 
+   90  cp podservice.yml pythonservice.yml
+   91  vi pythonservice.yml 
+   92  vi pod3Service.yml 
+   93  cp pod3Service.yml pythonSvc.yml
+   94  vi pythonSvc.yml 
+   95  vi pythonservice.yml 
+   96  ls
+   97  vi pythonservice.yml 
+   98  vi pythonSvc.yml 
+   99  kubectl apply -f pythonservice.yml 
+  100  minikube restart
+  101  minikube stop
+  102  minikube start
+  103  kubectl get pods
+  104  kubectl apply -f pythonservice.yml 
+  105  kubectl get pods
+  106  vi pythonservice.yml 
+  107  kubectl delete pod vivekflask
+  108  kubectl apply -f pythonservice.yml 
+  109  kubectl get pods
+  110  kubectl describe pod vivekflask
+  111  kubectl apply -f pythonSvc.yml 
+  112  kubectl get svc
+  113  history
+  114  history | grep url
+  115  ls
+  116  minikube service
+  117  kubectl get svc
+  118  minikube service vivekflaskservice --url
+  119  curl http://192.168.49.2:31004
+  120  clear
+  121  minikube service vivekflaskservice --url
+  122  clear
+  123  cat pythonSvc.yml 
+  124  cat pythonservice.yml 
+  125  curl http://192.168.49.2:31004
+  126  wget https://www.vsixhub.com/go.php?post_id=746&s=publish&link=https%3A%2F%2Ff2.vsixhub.com%2Ffile.php%3Fpost_id%3D746%26app_id%3D4837e4f3-1b01-4732-b1a6-daa57ef64cab%26version%3D1.3.7%26ext_name%3Dvscode-kubernetes-tools
+  127  ls
+  128  wget https://f2.vsixhub.com/file.php?post_id=746&app_id=4837e4f3-1b01-4732-b1a6-daa57ef64cab&version=1.3.7&ext_name=vscode-kubernetes-tools&token=438d852a763793aad9d6cc5c6d2d13ee1648623954
+  129  ls
+  130  clear
+  131  ls
+  132  clear
+  133  ls
+  134  cd k8s/
+  135  kubectl get pods
+  136  kubectl apply -f helloworl-deployment.yml 
+  137  kubectl get pods
+  138  kubectl apply -f configmap.yml 
+  139  kubectl get configmap
+  140  kubectl logs game-demo
+  141  kubectl apply -f mysql.yml 
+  142  kubectl apply -f secrets.yml
+  143  ls
+  144  kubectl get pods
+  145  kubectl describe pod database
+  146  kubectl apply -f secrets.yml 
+  147  kubectl describe pod database
+  148  kubectl delete -f database.yml
+  149  ls
+  150  kubectl delete -f mysql.yml 
+  151  kubectl apply -f mysql.yml 
+  152  kubectl get pods
+  153  kubectl logs -f database
+  154  kubectl describe pod database
+  155  kubectl delete -f mysql.yml 
+  156  kubectl delete -f secrets.yml 
+  157  kubectl apply -f mysql.yml secrets.yml 
+  158  kubectl apply -f secrets.yml 
+  159  kubectl apply -f mysql.yml 
+  160  kubectl get pods
+  161  kubectl logs -f database
+  162  kubectl delete -f mysql.yml 
+  163  kubectl apply -f mysql.yml 
+  164  kubectl get pods
+  165  kubectl logs -f database
+  166  kubectl delete -f mysql.yml 
+  167  kubectl get pod
+  168  kubectl delete pod databse
+  169  kubectl delete pod database
+  170  kubectl delete secrets helloworld-secrets
+  171  clear
+  172  kubectl apply -f secrets.yml 
+  173  kubectl apply -f mysql.yml 
+  174  kubectl get pods
+  175  kubectl logs mysql
+  176  kubectl delete -f mysql.yml 
+  177  kubectl apply -f mysql.yml 
+  178  kubectl get pods
+  179  kubectl decribe pod mysql
+  180  kubectl describe pod mysql
+  181  kubectl logs mysql
+  182  kubectl get pods
+  183  ls
+  184  minikube start
+  185  kubectl get pods
+  186  kubectl run pod5 --image=arjunachari12/k8s-demo --dry-run=client -o yaml > pod5.yml
+  187  ls
+  188  vi pod5.yml 
+  189  kubectl create deployment my-dep --image=busybox --port=5701 --dry-run=client -o yaml > deployment1.yml
+  190  vi deployment1.yml 
+  191  kubectl create deployment redis --image=redis --port=6379 --dry-run=client -o yaml > redisdeployment.yml
+  192  ls
+  193  vi redisdeployment.yml 
+  194  kubectl create service nodeport -h
+  195  kubectl create service nodeport redisservice --tcp=31110:6379 --dry-run=client -o yaml > redisservice.yml
+  196  vi redisservice.yml 
+  197  ls
+  198  cd k8s/
+  199  ls
+  200  vi pythonSvc.yml 
+  201  vi ../redisservice.yml 
+  202  vi ../redisdeployment.yml 
+  203  vi ../redisservice.yml 
+  204  vi pythonSvc.yml 
+  205  vi ../redisservice.yml 
+  206  kubectl apply -f ../redisdeployment.yml 
+  207  kubectl apply -f ../redisservice.yml 
+  208  kubectl get pod
+  209  kubectl logs redis-6d874bf455-sgw6v
+  210  minikube service redisservice --url
+  211  curl http://192.168.49.2:31111
+  212  ls
+  213  cd
+  214  ls
+  215  vi redisdeployment.yml 
+  216  kubectl get all
+  217  kubectl get secrets
+  218  kubectl get volumes
+  219  kubectl get volume
+  220  ll
+  221  cp ../pv-claim.yml .
+  222  kubectl apply -f pv-volume.yml 
+  223  kubectl apply -f pv-claim.yml 
+  224  kubectl apply -f pv-pod.yml 
+  225  kubectl get pods
+  226  kubectl logs -f task-pv-pod
+  227  kubectl expose pod task-pv-pod --port 8089 --name=pv-pod-service
+  228  vi pv-pod.yml 
+  229  kubectl expose pod task-pv-pod --port 80 --name=pv-pod-service
+  230  ls
+  231  kubectl apply -f hpaexample.yml 
+  232  kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+  233  kubectl get hpa
+  234  kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+  235  minikube service redisservice --url
+  236  kubectl get svc
+  237  minikube service php-apache --url
+  238  kubectl delete -f hpaexample.yml 
+  239  kubectl get hpa
+  240  kubectl apply -f hpaexample.yml 
+  241  history > history_commands.txt
